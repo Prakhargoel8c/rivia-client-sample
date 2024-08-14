@@ -50,11 +50,10 @@ function startRivaService() {
   if (rivaRunning) {
     return;
   }
-  console.log(io);
+  console.log(document.getElementById('token').value);
   socket = io('https://speech.adalat.ai', {
     auth: {
-      token:
-        'eyJhbGciOiJIUzI1NiIsImtpZCI6IlBXWEEzK2tQWXFzRitSWSsiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3VmcXl4dWlrd3FqZGZ2bnpqYmFxLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIyNTg1ZjVmYS03YTlkLTQ4N2ItYWY1Ny0wMDAwNjg0YjVjZGEiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzIzNjM1MTg0LCJpYXQiOjE3MjM2MzE1ODQsImVtYWlsIjoicHJha2hhcmdvZWwuZ2dAZ21haWwuY29tIiwicGhvbmUiOiIiLCJhcHBfbWV0YWRhdGEiOnsicHJvdmlkZXIiOiJlbWFpbCIsInByb3ZpZGVycyI6WyJlbWFpbCJdfSwidXNlcl9tZXRhZGF0YSI6e30sInJvbGUiOiJhdXRoZW50aWNhdGVkIiwiYWFsIjoiYWFsMSIsImFtciI6W3sibWV0aG9kIjoicGFzc3dvcmQiLCJ0aW1lc3RhbXAiOjE3MjM2MzE1ODR9XSwic2Vzc2lvbl9pZCI6ImU5NTY5NGI0LWQ1ZDEtNDU4OC1hNGEzLTA1OWYyNTQyMmJjYyIsImlzX2Fub255bW91cyI6ZmFsc2V9.hvOa8JP0nfSxbIvzWeCz_hYpfpDHmymLuN2cU8kEd0U',
+      token: document.getElementById('token').value,
     },
   });
 
